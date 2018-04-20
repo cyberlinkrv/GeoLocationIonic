@@ -28,38 +28,7 @@ export class HomePage {
     this.showMap();
 
   }
-
-  /*showMap() {
-    const location = new google.maps.LatLng(-17.802272, -50.912305);
-    const location2 = new google.maps.LatLng(-17.789182, -50.879812);
-    
-   
-
-    // map options
-    const options = {
-      center: location,
-      zoom: 14,
-      mapTypeId: 'hybrid'
-    }
-
-    const map = new google.maps.Map(this.mapRef.nativeElement, options);
-
-
-      this.addMarker(location, map);
-      this.addMarker(location2, map);
-
-
-  }
-
-  addMarker(position, map) {
-    return new google.maps.Marker({
-      position,
-      map
-    });
-  }
-
-  */
-
+  
   showMap() {
     this.geolocation.getCurrentPosition().then((position) => {
 
@@ -85,34 +54,6 @@ export class HomePage {
 
 
   }
-
- /* addInfoWindow(marker, content) {
-
-    let infoWindow = new google.maps.InfoWindow({
-      content: content
-    });
-
-    google.maps.event.addListener(marker, 'click', () => {
-      infoWindow.open(this.map, marker);
-    });
-
-  }
-
-
-  addMarker() {
-
-    let marker = new google.maps.Marker({
-      map: this.map,
-      animation: google.maps.Animation.DROP,
-      position: this.map.getCenter()
-    });
-
-    let content = "<h4>Aqui é onde eu estou agora!</h4>";
-
-    this.addInfoWindow(marker, content);
-
-  } */
-
   addMarker2(position, map) {
     return new google.maps.Marker({ position, map});
   }
